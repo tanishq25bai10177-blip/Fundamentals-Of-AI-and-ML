@@ -1,21 +1,15 @@
-# 🗑️ AI-Powered Waste Classifier
-## 📌 Overview
-This project is for the **Bring Your Own Project (BYOP)** capstone of the *Fundamentals of AI and ML* course. It deals with the issue of **waste segregation** in hostels, educational institutions, etc., using **AI/ML concepts** such as supervised learning, clustering, and natural language processing. It classifies the waste items into various types such as Wet, Dry, Recyclable, or Hazardous, depending on whether the image of the waste item is uploaded or the name of the waste item is entered in the system. This can promote the use of sustainable waste management in our environment. 
----
-## 🚀 Features
-- **Image Classification (Computer Vision)**: Image of waste item uploaded, and the type of waste item is predicted.  
-- **Text-Based Classification (NLP)**: Name of the waste item entered, and the type of waste item is classified.  
-- **Clustering (Unsupervised Learning)**: Waste items are grouped together in the case of missing labels.  
-- **Knowledge Base Search**: Waste items can be searched for in the knowledge base.  
-- **Feedback Loop**: The user can provide feedback to improve the model.  
----
-## 🛠️ Tech Stack
-- Python
-- TensorFlow/PyTorch
-- scikit-learn
-- Flask/Streamlit
-- OpenCV/PIL
----
+# 🗑️ AI-Powered Waste Classifier  
+## 📌 Overview  
+This project is part of the **Bring Your Own Project (BYOP)** capstone for the *Fundamentals of AI and ML* course. It solves the real-world problem of **waste segregation** using a simple supervised learning model. 
+The program takes a waste item name as input and predicts its category (**Wet, Dry, Recyclable, Hazardous**) directly in the terminal.  
+## 🚀 Features  
+- Text-based classification using **Naive Bayes**.  
+- Direct input/output in the compiler (no web interface).  
+- Small demo dataset included in the code.  
+- Easy to expand with more items.  
+## 🛠️ Tech Stack  
+- Python  
+- scikit-learn  
 ## ⚙️ Installation & Setup  
 1. Clone the repository:  
    ```bash
@@ -24,21 +18,21 @@ This project is for the **Bring Your Own Project (BYOP)** capstone of the *Funda
    ```  
 2. Install dependencies:  
    ```bash
-   pip install -r requirements.txt
+   pip install scikit-learn
    ```  
-3. Run the application:  
+3. Run the program:  
    ```bash
-   python src/app.py
-   ```
----
+   python app.py
 ## 📖 Usage  
-- **Image Input**: Upload a photo of waste → system predicts category.  
-- **Text Input**: Type item name (e.g., “banana peel”) → system predicts category.  
-- **Knowledge Base**: Search for disposal rules of common items.  
----
+- Enter a waste item name when prompted (e.g., `banana peel`, `battery`).  
+- The program will print the predicted category.  
+
+**Example:**  
+```
+Enter a waste item name: banana peel
+Predicted Category: wet
+
 ## 🎯 Learning Outcomes  
-- Applied **supervised learning** for classification.  
-- Used **unsupervised learning (clustering)** for grouping unlabeled data.  
-- Built a **knowledge representation system** for waste rules.  
-- Explored **NLP techniques** for text-based classification.  
-- Learned deployment basics with a simple web interface.  
+- Applied **supervised learning** (Naive Bayes classifier).  
+- Learned how to preprocess text and train a simple model.  
+- Demonstrated AI/ML concepts with minimal, clear code.  
