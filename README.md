@@ -16,21 +16,6 @@ This project is for the **Bring Your Own Project (BYOP)** capstone of the *Funda
 - Flask/Streamlit
 - OpenCV/PIL
 ---
-## 📂 Repository Structure  
-```
-├── data/                # Dataset (images, text samples)
-├── notebooks/           # Jupyter notebooks for experiments
-├── models/              # Trained ML models
-├── src/                 # Source code (training + app)
-│   ├── preprocessing.py
-│   ├── train_classifier.py
-│   ├── clustering.py
-│   ├── app.py
-├── README.md            # Setup & usage instructions
-├── report.pdf           # Project report
-└── requirements.txt     # Dependencies
-```
----
 ## ⚙️ Installation & Setup  
 1. Clone the repository:  
    ```bash
