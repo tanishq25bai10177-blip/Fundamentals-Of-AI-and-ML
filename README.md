@@ -42,6 +42,3 @@ This project is for the **Bring Your Own Project (BYOP)** capstone of the *Funda
 - Built a **knowledge representation system** for waste rules.  
 - Explored **NLP techniques** for text-based classification.  
 - Learned deployment basics with a simple web interface.  
----
-## 📜 License  
-This project is for educational purposes as part of the *Fundamentals of AI and ML* course.
