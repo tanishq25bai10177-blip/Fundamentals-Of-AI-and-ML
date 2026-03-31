@@ -1,38 +1,45 @@
 # 🗑️ AI-Powered Waste Classifier  
 ## 📌 Overview  
-This project is part of the **Bring Your Own Project (BYOP)** capstone for the *Fundamentals of AI and ML* course. It solves the real-world problem of **waste segregation** using a simple supervised learning model. 
-The program takes a waste item name as input and predicts its category (**Wet, Dry, Recyclable, Hazardous**) directly in the terminal.  
+This project is part of the **Bring Your Own Project (BYOP)** capstone for the *Fundamentals of AI and ML* course. It addresses the problem of **waste segregation** using a simple rule‑based classifier written entirely in Python.  
+
+The program takes a waste item name as input and predicts its category (**Wet, Dry, Recyclable, Hazardous**) directly in the terminal. No external libraries are required, making it easy to run in any environment. 
+---
 ## 🚀 Features  
-- Text-based classification using **Naive Bayes**.  
+- Expanded dataset of common waste items.  
 - Direct input/output in the compiler (no web interface).  
-- Small demo dataset included in the code.  
-- Easy to expand with more items.  
+- **No prior installation needed** — runs with plain Python.  
+- Partial matching support (typing “banana” matches “banana peel”).  
+---
 ## 🛠️ Tech Stack  
-- Python  
-- scikit-learn  
-## ⚙️ Installation & Setup  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-username/ai-waste-classifier.git
-   cd ai-waste-classifier
-   ```  
-2. Install dependencies:  
-   ```bash
-   pip install scikit-learn
-   ```  
-3. Run the program:  
+- Python (standard library only)  
+---
+## ⚙️ Setup & Execution  
+1. Save the code as `app.py`.  
+2. Run the program in your terminal:  
    ```bash
    python app.py
+   ```  
+---
 ## 📖 Usage  
-- Enter a waste item name when prompted (e.g., `banana peel`, `battery`).  
-- The program will print the predicted category.  
+1. When prompted, enter a waste item name (e.g., `banana peel`, `battery`, `tin can`).  
+2. The program prints the predicted category.  
 
 **Example:**  
 ```
-Enter a waste item name: banana peel
+Enter a waste item name: banana
 Predicted Category: wet
+```
 
+```
+Enter a waste item name: tin can
+Predicted Category: recyclable
+```
+
+```
+Enter a waste item name: expired medicine
+Predicted Category: hazardous
+```
 ## 🎯 Learning Outcomes  
-- Applied **supervised learning** (Naive Bayes classifier).  
-- Learned how to preprocess text and train a simple model.  
-- Demonstrated AI/ML concepts with minimal, clear code.  
+- Applied classification concepts using a simple rule‑based approach.  
+- Learned how to design a dataset and map items to categories.  
+- Demonstrated AI/ML fundamentals without external dependencies.  
