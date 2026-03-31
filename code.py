@@ -1,19 +1,54 @@
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
+# AI-powered waste classifier (no external libraries)
 
-# Training data (tiny demo dataset)
-items = ["banana peel", "apple core", "plastic bottle", "paper", "battery"]
-labels = ["wet", "wet", "recyclable", "dry", "hazardous"]
+# Expanded dataset: dictionary of items and categories
+waste_categories = {
+    # Wet waste
+    "banana peel": "wet",
+    "apple core": "wet",
+    "vegetable scraps": "wet",
+    "tea leaves": "wet",
+    "food leftovers": "wet",
+    "orange peel": "wet",
+    "cooked rice": "wet",
 
-# Train classifier
-vectorizer = CountVectorizer()
-X = vectorizer.fit_transform(items)
-model = MultinomialNB()
-model.fit(X, labels)
+    # Dry waste
+    "paper": "dry",
+    "cardboard": "dry",
+    "old books": "dry",
+    "cloth": "dry",
+    "wood pieces": "dry",
+    "dust": "dry",
+    "broken toys": "dry",
 
-# User input
-item = input("Enter a waste item name: ")
+    # Recyclable waste
+    "plastic bottle": "recyclable",
+    "plastic wrapper": "recyclable",
+    "glass bottle": "recyclable",
+    "tin can": "recyclable",
+    "newspaper": "recyclable",
+    "aluminium foil": "recyclable",
+    "magazine": "recyclable",
 
-# Prediction
-prediction = model.predict(vectorizer.transform([item]))[0]
-print("Predicted Category:", prediction)
+    # Hazardous waste
+    "battery": "hazardous",
+    "medicine strip": "hazardous",
+    "paint can": "hazardous",
+    "broken tube light": "hazardous",
+    "e-waste": "hazardous",
+    "chemical container": "hazardous",
+    "expired medicine": "hazardous"
+}
+
+# Take user input
+item = input("Enter a waste item name: ").strip().lower()
+
+# Prediction with partial matching
+found = False
+for key in waste_categories:
+    if item in key:  # allows partial matches like "banana"
+        print("Predicted Category:", waste_categories[key])
+        found = True
+        break
+
+if not found:
+    print("Item not found in dataset. Please try one of these:", list(waste_categories.keys()))
